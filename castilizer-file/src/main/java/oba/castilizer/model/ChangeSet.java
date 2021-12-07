@@ -11,5 +11,4 @@ import lombok.*;
 public class ChangeSet {
     private String paramName;
     private String paramSet;
-
 }

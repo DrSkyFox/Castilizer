@@ -2,19 +2,24 @@ package oba.castilizer.service;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
 
 @Slf4j
 @Service
+@PropertySource(value = "classpath:application.yaml")
 public class FileChangeService implements IFileChange {
 
+    @Value("${app.file}")
+    private String fileStr;
 
     @Override
     public Boolean changeFileParam(String paramName, String paramSet) {
         log.info("Call changeFileParam, Input param method {}, {}", paramName, paramSet);
-        String fileStr = "D:\\Sborka\\__FITNESS\\EFT2\\EFT2\\Eft.ini";
+//        String fileStr = "D:\\Sborka\\__FITNESS\\EFT2\\EFT2\\Eft.ini";
         var inputBuffer = readFile(paramName,paramSet,fileStr);
 
 

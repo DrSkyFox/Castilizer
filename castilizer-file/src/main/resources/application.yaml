@@ -1,0 +1,5 @@
+server:
+  port: 8080
+
+app:
+  file: "D:\\Sborka\\__FITNESS\\EFT2\\EFT2\\Eft.ini"
