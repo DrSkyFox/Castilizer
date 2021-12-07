@@ -1,0 +1,7 @@
+POST localhost:8080/api/file/change
+Content-Type: application/json
+
+{
+  "paramName" : "FromTime",
+  "paramSet" : "14:00"
+}
